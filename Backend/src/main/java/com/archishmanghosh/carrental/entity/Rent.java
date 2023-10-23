@@ -38,4 +38,6 @@ public class Rent {
     @JoinColumn(name = "car_id")
     private Cars car;
 
+    @EmbeddedId
+    private RentCompositeKey rentCompositeKey;
 }

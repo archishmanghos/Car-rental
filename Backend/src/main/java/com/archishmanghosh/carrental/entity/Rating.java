@@ -33,4 +33,7 @@ public class Rating {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "payment_id")
     private Payment payment;
+
+    @EmbeddedId
+    private RatingCompositeKey ratingCompositeKey;
 }

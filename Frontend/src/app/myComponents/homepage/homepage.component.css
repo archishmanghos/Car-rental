@@ -1,0 +1,77 @@
+.body {
+    background-image: linear-gradient(#A2B9EE, #A2DCEE);
+    font-family: 'Playfair Display', serif;
+}
+
+.banner-heading {
+    padding-top: 15%;
+    padding-right: 4%;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 40px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.main-container {
+    min-width: 1024px;
+    min-height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background: url(src/assets/rental-banner.jpg) no-repeat center -80px fixed; /* Image by pch.vector on Freepik */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: right;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #7577b9 !important;
+    font-size: 20px;
+    padding: 0 2%;
+    align-items: center;
+    border-bottom: 1px solid #CCCCCC;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbutton {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    background-color:#ADEEE2;
+    padding: 11px 25px;
+
+    margin-left: 30px;
+    display: inline-block;
+    position: relative;
+    border-radius: 3%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbutton:hover .dropdown {
+    display: block;
+}
+
+.nav-button {
+    background-color: #ADEEE2;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}

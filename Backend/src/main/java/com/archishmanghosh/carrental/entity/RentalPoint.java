@@ -24,12 +24,12 @@ public class RentalPoint {
     @JoinColumn(name = "manager_id")
     private Manager manager;
 
-    @OneToMany(mappedBy = "rental_points",
+    @OneToMany(mappedBy = "point",
             fetch = FetchType.EAGER,
             cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     List<Cars> cars;
 
-    @OneToMany(mappedBy = "rental_points",
+    @OneToMany(mappedBy = "rentalPoint",
             fetch = FetchType.EAGER,
             cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     List<Rating> ratings;

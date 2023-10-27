@@ -1,0 +1,42 @@
+<div class="body">
+    <nav class="navbar bg-success">
+        <div>
+            <a class="navbar-brand" href="#">
+            <img src="../../../assets/brand-logo.png" alt="cars" width="100" height="80">
+            <span style="font-size: 30px;">cars.com</span>
+            </a>
+        </div>
+        <nav>
+            <div class="navbutton">
+                <a href="redirect.html">Book Online</a>
+
+                <div class="dropdown">
+                    <div class="navbutton">
+                        <a href="redirect.html" class="btn nav-button">Onsite Service</a>
+                    </div>
+                    <div class="navbutton">
+                        <a href="redirect.html">Parts Delivery</a>
+                    </div>
+                    <div class="navbutton">
+                        <a href="redirect.html">Request Callback</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="navbutton">
+                <a href="redirect.html">About</a>
+            </div>
+            <div class="navbutton">
+                <a href="contact-us.html">Contact</a>
+            </div>
+            <button class="navbutton" (click)="openPopup()">Login</button>
+            <app-login-register *ngIf="showPopup"></app-login-register>
+        </nav>
+    </nav> 
+    <div class="main-container">
+        <div class="banner-heading">
+            <p>Renting a car has been never been easier!</p>
+            <button class="btn btn-outline-primary btn-lg" style="font-family: 'Merriweather', serif; font-weight: 700;">Rent Now</button>
+        </div>
+    </div>
+</div>

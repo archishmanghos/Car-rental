@@ -20,6 +20,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 31.25rem;
 }
 
 .popup.active,
@@ -41,3 +42,16 @@
   cursor: pointer;
   outline: none;
 }
+
+.form-group {
+  margin: 3% 0;
+}
+
+.signup {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+}
+
+/* label {
+  padding: 3% 0;
+} */

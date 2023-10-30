@@ -30,7 +30,10 @@
                 <a href="contact-us.html">Contact</a>
             </div>
             <button class="navbutton" (click)="openPopup()">Login</button>
-            <app-login-register *ngIf="showPopup"></app-login-register>
+            <app-login-register *ngIf="showPopup"
+            [showPopup]="showPopup" 
+            (closePopup)="closePopup()"
+            ></app-login-register>
         </nav>
     </nav> 
     <div class="main-container">

@@ -11,4 +11,8 @@ export class HomepageComponent {
   openPopup() {
     this.showPopup = true;
   }
+
+  closePopup() {
+    this.showPopup = false;
+  }
 }

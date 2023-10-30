@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login-register',
@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-register.component.css']
 })
 export class LoginRegisterComponent {
-  showPopup: boolean = true;
+  @Input() showPopup: boolean = false;
+  @Output() closePopup = new EventEmitter<void>();
 
-  closePopup() {
-    this.showPopup = false;
+  onClosePopup() {
+    this.closePopup.emit();
   }
 }

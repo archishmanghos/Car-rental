@@ -1,0 +1,20 @@
+.custom-card-img {
+    height: 200px;
+}
+
+.container {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4% 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.custom-card {
+    width: 18rem; 
+    height: 22rem;
+}

@@ -27,7 +27,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    background: url(src/assets/rental-banner.jpg) no-repeat center -80px fixed; /* Image by pch.vector on Freepik */
+    background: url(src/assets/rental-banner.jpg) no-repeat center -80px; /* Image by pch.vector on Freepik */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

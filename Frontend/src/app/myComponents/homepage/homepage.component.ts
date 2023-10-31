@@ -15,4 +15,8 @@ export class HomepageComponent {
   closePopup() {
     this.showPopup = false;
   }
+
+  toRent() {
+    document.getElementById("rent")!.scrollIntoView();
+  }
 }

@@ -6,6 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./cars-display.component.css']
 })
 export class CarsDisplayComponent {
+  showDetails: boolean = false;
+  index: number = 0;
+
+  turnDetailsOn(event: any) {
+    const buttonId = event.target.id;
+    const index_ = parseInt(buttonId.split('-')[1]);
+    this.index=index_;
+    this.showDetails = true;
+  }
+
+  turnDetailsOff() {
+    this.showDetails = false;
+  }
+
   cars: any[] = [
     {
       "chassis_no": "1FTEF14N5KNB30636",

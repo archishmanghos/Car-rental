@@ -1,12 +1,12 @@
 .body {
     background-image: linear-gradient(#A2B9EE, #A2DCEE);
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 .banner-heading {
     padding-top: 15%;
     padding-right: 4%;
-    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 40px;
     max-width: 600px;
@@ -51,7 +51,7 @@
 }
 
 .navbutton {
-    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     background-color:#ADEEE2;
     padding: 11px 25px;

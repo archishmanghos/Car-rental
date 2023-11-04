@@ -11,8 +11,7 @@ export class CarsDisplayComponent {
 
   turnDetailsOn(event: any) {
     const buttonId = event.target.id;
-    const index_ = parseInt(buttonId.split('-')[1]);
-    this.index=index_;
+    this.index = parseInt(buttonId.split('-')[1]);
     this.showDetails = true;
   }
 

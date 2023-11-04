@@ -1,6 +1,63 @@
 <div class="backdrop"></div>
 <div class="popup">
+    <div id="carousel-container" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-container" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+          <li data-target="#carousel-container" data-bs-slide-to="1" aria-label="Slide 2"></li>
+          <li data-target="#carousel-container" data-bs-slide-to="2" aria-label="Slide 3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img class="d-block carousel-img" [src]="'../../../assets/' + cars[index].img" alt="First slide">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img class="d-block carousel-img" [src]="'../../../assets/' + cars[11].img" alt="Second slide">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img class="d-block carousel-img" [src]="'../../../assets/' + cars[5].img" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" type="button" data-bs-target="#carousel-container" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" type="button" data-bs-target="#carousel-container" data-bs-slide="prev">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+      
     <button class="close-button" (click)="onTurnDetailsOff()">&times;</button>
-    <p>Model:</p><span>{{ cars[index].model }}</span>
-    <p>Availaibility:</p><span>{{ cars[index].availaibility }}</span>
+    <div class="details-container">
+        <h2 style="font-weight: 700;">{{ cars[index].model }} [ <span [style.color]="cars[index].availaibility.substring(0,2) === 'at' ? 'orange' : cars[index].availaibility.substring(0,2) === 'av' ? 'green' : 'red'" style="font-size: 35px;">{{ cars[index].availaibility }} </span> ]</h2>
+        <div class="key-details">
+            <div class="icon">
+                <img src="../../../assets/gas-icon.avif" alt="" style="height: 45px; width: 70px;">
+                <p style="align-self: flex-end;">Petrol</p>
+            </div>
+            <div class="icon">
+                <div [style.background-color]="cars[index].colour == 'white' ? 'grey' : cars[index].colour" class="color-div"></div>
+                <p>Colour</p>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/engine-icon.png" alt="" style="height: 50px; width: 70px;">
+                <p>{{ cars[index].engine_displacement }} cc</p>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/condition-icon.png" alt="" style="height: 55px; width: 70px;">
+                <p>{{ cars[index].car_condition }}</p>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/mileage.png" alt="" style="height: 55px; width: 65px;">
+                <p>{{ cars[index].km_driven }} kms</p>
+            </div>
+            <div class="icon">
+                <img src="../../../assets/rent-icon.png" alt="" style="height: 55px; width: 65px;">
+                <p>&#8377; {{ cars[index].price_per_hour }} /hr OR &#8377; {{ cars[index].price_per_km }} /km</p>
+            </div>
+        </div>
+        <div class="rent-buttons">
+            <button class="btn btn-outline-warning">More Details &#10132;</button>
+            <button class="btn btn-outline-primary">Rent With Driver &#10132;</button>
+            <button class="btn btn-outline-primary">Rent Without Driver &#10132;</button>
+        </div>
+    </div>
 </div>

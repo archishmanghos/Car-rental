@@ -1,18 +1,19 @@
 <div class="body">
-    <section class="container">
-        <div class="testimonial">
-            <div class="testi-content">
-                <div class="slide">
-                    <img src="../../../assets/testimonial/person1.jpg" alt="" class="image">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat a perferendis aut! Et officia dignissimos id architecto laborum, magnam ex reiciendis commodi accusamus! Modi ut placeat commodi? Nobis, voluptates dolores.</p>
-                    <fa-icon [icon]="faQuoteLeft" class="quote-icon"></fa-icon>
-
-                    <div class="details">
-                        <span class="name">কালু Anjan</span>
-                        <span class="job">Developer</span>
-                    </div>
+    <div class="heading"><b>Our</b> Testimonials</div>
+    <div class="wrapper">
+        <div class="container" *ngFor = "let testimonial of testimonials">
+            <div class="profile">
+                <div class="imgBox">
+                    <img [src]="'../../../assets/' + testimonial.image" alt="">
                 </div>
+                <h2>{{ testimonial.name }}</h2>
+            </div>
+            <p><fa-icon [icon]="faQuoteLeft" class="left"></fa-icon>{{ testimonial.quote }}<fa-icon [icon]="faQuoteRight" class="right"></fa-icon></p>
+            <div class="social">
+                <fa-icon [icon]="faTwitter"></fa-icon>
+                <fa-icon [icon]="faYoutube"></fa-icon>
+                <fa-icon [icon]="faInstagram"></fa-icon>
             </div>
         </div>
-    </section>
+    </div>
 </div>

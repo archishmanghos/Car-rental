@@ -20,24 +20,32 @@ export class HomepageComponent {
     document.getElementById("rent")!.scrollIntoView();
   }
 
+  toHome() {
+    document.getElementById("home")!.scrollIntoView();
+  }
+
+  toAbout() {
+    document.getElementById("about")!.scrollIntoView();
+  }
+
   testimonials: any[] = [
     {
-      name: "Anju",
+      name: "Person - 1",
       social: ["mangomanga", "mangomanga", "anjuCooks"],
       image: "testimonial/person1.jpg",
-      quote: "ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quae aperiam veritatis eius voluptate excepturi a. Enim quaerat exercitationem natus distinctio? Quibusdam amet laudantium ratione quia provident magnam inventore voluptatibus pariatur nemo harum sit fuga laboriosam ipsum iste, aut autem."
+      quote: "Using cars.com for my recent trip was a breeze! The wide selection of well-maintained cars, easy booking process, and excellent customer service made my journey smooth and enjoyable. Highly recommended!"
     },
     {
-      name: "Baipool",
+      name: "Person - 2",
       social: ["lovesbi", "lovesbi", "baipoolLoves"],
       image: "testimonial/person2.avif",
-      quote: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum praesentium molestias esse quas eos voluptatum dolore voluptas accusamus temporibus qui quidem, dolores tenetur nulla fuga suscipit repudiandae et laboriosam enim. Aliquid sed soluta est natus? Ab deserunt unde saepe ratione."
+      quote: "Highly impressed with the seamless experience provided by cars.com. Their user-friendly platform, prompt customer support, and well-maintained vehicles made my travel convenient and stress-free. Will definitely choose them again!"
     },
     {
-      name: "beANandi",
+      name: "Person - 3",
       social: ["loveTalibani", "loveTalibani", "beANandi"],
       image: "testimonial/person3.avif",
-      quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At hic animi distinctio quidem eveniet odit dolorem placeat nostrum vel in eligendi exercitationem porro iste dolor, minima veritatis cupiditate soluta tenetur impedit possimus reprehenderit dignissimos molestiae! Sit quae tenetur inventore eum!"
+      quote: "Choosing cars.com for my road trip was a game-changer. Their top-notch service, reliable vehicles, and transparent pricing exceeded my expectations. A trustworthy companion for every traveler's journey. Kudos to the team!"
     }
   ]
 }

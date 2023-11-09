@@ -1,9 +1,9 @@
 <div class="body">
     <nav class="navbar bg-success">
         <div>
-            <a class="navbar-brand" href="#">
-            <img src="../../../assets/brand-logo.png" alt="cars" width="100" height="80">
-            <span style="font-size: 30px;">cars.com</span>
+            <a class="navbar-brand" (click)="toHome()">
+                <img src="../../../assets/brand-logo.png" alt="cars" width="100" height="80">
+                <span style="font-size: 30px;">cars.com</span>
             </a>
         </div>
         <nav>
@@ -21,10 +21,9 @@
                         <a href="redirect.html">Request Callback</a>
                     </div>
                 </div>
-
             </div>
             <div class="navbutton">
-                <a href="redirect.html">About</a>
+                <a (click)="toAbout()">About</a>
             </div>
             <div class="navbutton">
                 <a href="contact-us.html">Contact</a>
@@ -44,4 +43,5 @@
     </div>
     <app-cars-display id="rent"></app-cars-display>
     <app-testimonials [testimonials] = "testimonials"></app-testimonials>
+    <app-footer id="about"></app-footer>
 </div>

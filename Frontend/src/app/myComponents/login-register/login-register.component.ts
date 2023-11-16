@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { faCircleXmark, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-login-register',
@@ -8,6 +10,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class LoginRegisterComponent {
   @Input() showPopup: boolean = false;
   @Output() closePopup = new EventEmitter<void>();
+
+  faCircleXmark = faCircleXmark;
+  faEyeSlash = faEyeSlash;
+  faFacebookF = faFacebookF;
+  faGoogle = faGoogle;
 
   onClosePopup() {
     this.closePopup.emit();

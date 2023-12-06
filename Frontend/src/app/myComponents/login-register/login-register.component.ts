@@ -35,5 +35,12 @@ export class LoginRegisterComponent {
         }
       }
     });
+
+    const forms = document.querySelector('.forms'),
+        pwShowHide = document.querySelector('.eye-icon'),
+        links = document.querySelector('.link');
+
+    console.log(forms, pwShowHide, links);
+    
   }
 }

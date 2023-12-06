@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { DataSharingService } from '../../myServices/data-sharing.service';
 
 
 @Component({
@@ -9,12 +10,13 @@ import { Router, RouterModule } from '@angular/router';
 })
 
 export class CarDetailsComponent {
-    constructor(private router: Router) { }
 
     @Input() cars: any[] = [];
     @Input() index: any;
     @Input() showDetails: boolean = false;
     @Output() turnDetailsOff = new EventEmitter<void>();
+
+    constructor(private router: Router, private dataSharingService: DataSharingService) { }
 
     onTurnDetailsOff() {
         console.log(this.showDetails);
@@ -22,9 +24,10 @@ export class CarDetailsComponent {
     }
 
     detailsClick(id: number): void {
-        console.log(id);
-        console.log(this.cars[id]);
+        // console.log(id);
+        // console.log(this.cars);
         
-        this.router.navigate(['/details', id], {state: {data: this.cars[id]}});
+        this.router.navigate(['/details', id]);
+        this.dataSharingService.setSharedData(this.cars);
     }
 }

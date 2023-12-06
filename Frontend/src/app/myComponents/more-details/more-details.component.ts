@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DataSharingService } from '../../myServices/data-sharing.service';
 
 @Component({
     selector: 'app-more-details',
@@ -7,36 +8,25 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./more-details.component.css']
 })
 export class MoreDetailsComponent {
-    cars: any;
+    cars: any[] = [];
     id: any;
 
-    constructor(private route: ActivatedRoute) { }
+    constructor(private route: ActivatedRoute, private dataSharingService: DataSharingService) { }
 
     ngOnInit(): void {
+        console.log('Before Init', this.cars);
+        
         this.route.params.subscribe(params => {
             this.id = +params['id'];
+            this.id -= 1;
         });
 
-        this.route.data.subscribe(aata => {
-            console.log('Route Data:', aata);
-            // const jsonData = data['state']?.data;
-            // console.log(jsonData);
-            
-            // if (jsonData) {
-
-            // }
-        });
-
-        console.log('Snapshot:', this.route.snapshot);
-        console.log('Data:', this.route.snapshot?.data);
-        console.log('State:', this.route.snapshot?.data['state']);
-        const data = this.route.snapshot?.data['state']?.data;
-        console.log('JsonData:', data);
-        
-        if (data) {
-            this.cars = data['state']?.data;
+        this.dataSharingService.sharedData$.subscribe(data => {
+            this.cars = data;
             console.log(this.cars);
-        }
+        });
+
+        console.log('After Init', this.cars);
     }
 }
 

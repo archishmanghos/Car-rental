@@ -55,9 +55,13 @@
             </div>
         </div>
         <div class="rent-buttons">
-            <button class="btn btn-outline-warning">More Details &#10132;</button>
+            <button class="btn btn-outline-warning" 
+            [routerLink]="['/details', cars[index].id]" 
+            (click)="detailsClick(cars[index].id)"
+            >More Details &#10132;</button>
             <button class="btn btn-outline-primary">Rent With Driver &#10132;</button>
             <button class="btn btn-outline-primary">Rent Without Driver &#10132;</button>
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>
